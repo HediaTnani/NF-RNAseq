@@ -1,6 +1,6 @@
 #!/usr/bin/env nextflow
 
-# author: Hédia Tnani (Pasteur Institute of Tunis)
+// author: Hédia Tnani (Pasteur Institute of Tunis)
 
 // This is needed for activating the new DLS2
 nextflow.enable.dsl=2
