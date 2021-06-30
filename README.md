@@ -87,7 +87,16 @@ Pipeline parameters are declared in the workflow by prepending the prefix params
 
 ` nextflow run RNAseq.nf --input 'data/reads/*R{1,2}.fq.gz'`
 
-# Modules
+# Worflow infrastructure
+
+**Channels**
+Channels are the way in which Nextflow sends data around a workflow. Channels connect processes via their inputs and outputs. Channels can store multiple items, such as files (e.g., fastq files) or values. The number of items a channel stores determines how many times a process runs.
+The `fromPath` factory method creates a queue channel emitting one or more files matching a file path. 
+
+**Processes**
+A process is the way Nextflow execute commands you would run on the command line or custom scripts. It is the Channels that pass the data from each process to another, and we do this by having the processes define input and output channels.
+
+**Modules**
 
 Each step is separated in a module with an input and an output.
 
@@ -95,7 +104,8 @@ Nextflow (DSL2) allows the definition of module scripts that can be included and
 
 A module file is a Nextflow script containing one or more process definitions that can be imported from another Nextflow script.
 
-
+**Workflow**
+A workflow id combination of multiple processes.
 
 ## Run the pipeline
 
