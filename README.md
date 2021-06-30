@@ -52,6 +52,8 @@ Docker should now be installed, the daemon started, and the process enabled to s
 
 
 **Run Docker Commands Without Sudo**
+
+
 It is advisable to keep the settings as is. However, you can bypass typing sudo every time. Adding the user to the docker group grants privileges equivalent to root.
 
 1. First, create the docker group with the command:`sudo groupadd docker`
