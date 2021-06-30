@@ -23,15 +23,46 @@ This will create the nextflow main executable file in the current directory.
 Make the binary executable on your system by running `chmod +x nextflow`.
 
 # Docker
+**Installing Docker
+First, update your existing list of packages:
+`sudo apt update`
+
+Next, install a few prerequisite packages which let apt use packages over HTTPS:
+`sudo apt install apt-transport-https ca-certificates curl software-properties-common`
+
+Then add the GPG key for the official Docker repository to your system:
+`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
+
+Add the Docker repository to APT sources:
+`sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"`
+
+Next, update the package database with the Docker packages from the newly added repo:
+`sudo apt update`
+
+Make sure you are about to install from the Docker repo instead of the default Ubuntu repo:
+`apt-cache policy docker-ce`
+
+Finally, install Docker:
+`sudo apt install docker-ce`
+
+Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it’s running:
+`sudo systemctl status docker`
+
 
 **Run Docker Commands Without Sudo**
 It is advisable to keep the settings as is. However, you can bypass typing sudo every time. Adding the user to the docker group grants privileges equivalent to root.
 
 1. First, create the docker group with the command:`sudo groupadd docker`
 
-2. Then, type the following command (making sure to replace [user] with your username): `sudo usermod -aG docker [user]`
+2. Then, type the following command (making sure to replace [user] with your username): `sudo usermod -aG docker ${USER}`
 
-3. Enable the new settings with: `su - [user]`
+3. Enable the new settings with: `su - ${USER}`
+
+4. Confirm that your user is now added to the docker group by typing: `id -nG`
+
+5. Declare that username explicitly using: `sudo usermod -aG docker username`
+
+
 
 # Singularity
 
@@ -72,14 +103,18 @@ To run a Nextflow script use the command `nextflow run main.nf -profile docker`.
 
 
 ## Result architecture
-# Quality check
+# Quality control
 ![image](https://user-images.githubusercontent.com/59562743/123944223-d19c4a00-d994-11eb-91ec-d4ae1e7c685f.png)
 
 
 # Trimming 
 ![image](https://user-images.githubusercontent.com/59562743/123944093-b03b5e00-d994-11eb-9134-c635c1540973.png)
 
+# Mapping 
+![image](https://user-images.githubusercontent.com/59562743/123947189-0362e000-d998-11eb-828e-0c3ada2fea64.png)
 
+# Quantification
+![image](https://user-images.githubusercontent.com/59562743/123947308-28575300-d998-11eb-9925-a73d52693b4c.png)
 
 
 
