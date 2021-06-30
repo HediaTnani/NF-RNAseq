@@ -42,14 +42,14 @@ metadata = file(params.metadata)
 
 // We include the modules
 
-include { fastqc as fastqc_raw; fastqc as fastqc_trim } from "${launchDir}/modules/fastqc" //addParams(OUTPUT: fastqcOutputFolder)
+include { fastqc as fastqc_raw; fastqc as fastqc_trim } from "${launchDir}/modules/fastqc" 
 include { trimmomatic } from "${launchDir}/modules/trimmomatic"
 include { star_idx; star_alignment } from "${launchDir}/modules/star"
 include { multiqc } from "${launchDir}/modules/multiqc"
-include {featurecounts} from "${launchDir}/modules/featurecounts2.nf" 
-include {finalcount} from "${launchDir}/modules/merge.nf"
-include {countmatrix} from "${launchDir}/modules/countmatrix.nf"
-//include {deseq} from "${launchDir}/modules/deseq2.nf"
+include {featurecounts} from "${launchDir}/modules/featurecounts2" 
+include {finalcount} from "${launchDir}/modules/merge"
+include {countmatrix} from "${launchDir}/modules/countmatrix"
+//include {deseq} from "${launchDir}/modules/deseq2"
 
 // We run the workflow  
 workflow {
