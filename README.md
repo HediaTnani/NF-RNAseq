@@ -103,9 +103,7 @@ A process is the way Nextflow execute commands you would run on the command line
 **Modules**
 
 Each step is separated in a module with an input and an output.
-
 Nextflow (DSL2) allows the definition of module scripts that can be included and shared across workflow pipelines.
-
 A module file is a Nextflow script containing one or more process definitions that can be imported from another Nextflow script.
 
 This is an example on how to include a module in the main script `include { fastqc as fastqc_raw; fastqc as fastqc_trim } from "${launchDir}/modules/fastqc" `.
@@ -115,9 +113,11 @@ A workflow is a combination of multiple processes.
 Here an example of a workflow. 
 
 `workflow {
-  transcriptome_ch = channel.fromPath('data/yeast/transcriptome/*.fa.gz')
-  reads = channel.fromFilePairs('data/yeast/reads/*_{1,2}.fq.gz')
-}`
+  // QC on raw reads
+  read_pairs_ch.view()
+  fastqc_raw(read_pairs_ch)`
+  
+ In this the reads connect to the process via the reads pairs channel.
 
 ## Run the pipeline
 
