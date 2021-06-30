@@ -78,10 +78,10 @@ TODO
 This pipeline has been run with test data. The steps 
 
 1. QC ([`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
-2. Adapter and quality trimming ([`Trim Galore!`](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/))
-3. Alignment[`STAR`](https://github.com/alexdobin/STAR) 
+2. Adapter and quality trimming ([`Trimmomatic!`](http://www.usadellab.org/cms/?page=trimmomatic))
+3. Alignment[`STAR`](https://github.com/alexdobin/STAR)) 
 4. Sort and index alignments ([`SAMtools`](https://sourceforge.net/projects/samtools/files/samtools/))
-5. Quantification ([`FeatureCounts`](http://subread.sourceforge.net/)
+5. Quantification ([`FeatureCounts`](http://subread.sourceforge.net/))
 6. Merge counts (Rscript)
 
 # Pipeline parameters
