@@ -1,0 +1,6 @@
+sample  condition
+mouse_cns_E14_rep1 control
+mouse_cns_E14_rep2 control
+mouse_cns_E18_rep1 trt
+mouse_cns_E18_rep2 trt
+
