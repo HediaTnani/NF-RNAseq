@@ -23,7 +23,7 @@ This will create the nextflow main executable file in the current directory.
 Make the binary executable on your system by running `chmod +x nextflow`.
 
 # Docker
-**Installing Docker
+**Installing Docker**
 First, update your existing list of packages:
 `sudo apt update`
 
