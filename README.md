@@ -108,8 +108,11 @@ Nextflow (DSL2) allows the definition of module scripts that can be included and
 
 A module file is a Nextflow script containing one or more process definitions that can be imported from another Nextflow script.
 
+This is an example on how to include a module in the main script `include { fastqc as fastqc_raw; fastqc as fastqc_trim } from "${launchDir}/modules/fastqc" `.
+
 **Workflow**
 A workflow id combination of multiple processes.
+
 
 ## Run the pipeline
 
