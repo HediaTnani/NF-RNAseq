@@ -89,7 +89,7 @@ The Nextflow script defines a pipeline parameter `params.input`. Pipeline parame
 
 Pipeline parameters are declared in the workflow by prepending the prefix params, separated by dot character, to a variable name e.g., params.input. Their value can be specified on the command line by prefixing the parameter name with a double dash character, e.g., --input.
 
-` nextflow run RNAseq.nf --input 'data/reads/*R{1,2}.fq.gz'`
+` nextflow run main.nf --input 'data/reads/*R{1,2}.fq.gz'`
 
 # Worflow infrastructure
 
