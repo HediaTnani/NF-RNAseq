@@ -24,6 +24,8 @@ Make the binary executable on your system by running `chmod +x nextflow`.
 
 # Docker
 **Installing Docker**
+
+
 First, update your existing list of packages:
 `sudo apt update`
 
