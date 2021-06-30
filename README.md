@@ -68,6 +68,16 @@ A module file is a Nextflow script containing one or more process definitions th
 
 ## Run the pipeline
 
-To run a Nextflow script use the command `nextflow run <script_name>`.
+To run a Nextflow script use the command `nextflow run main.nf -profile docker`.
+
+
+## Result architecture
+# Quality check
+
+
+# Trimming 
+![image](https://user-images.githubusercontent.com/59562743/123944093-b03b5e00-d994-11eb-9134-c635c1540973.png)
+
+
 
 
