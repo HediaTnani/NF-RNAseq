@@ -111,8 +111,13 @@ A module file is a Nextflow script containing one or more process definitions th
 This is an example on how to include a module in the main script `include { fastqc as fastqc_raw; fastqc as fastqc_trim } from "${launchDir}/modules/fastqc" `.
 
 **Workflow**
-A workflow id combination of multiple processes.
+A workflow is a combination of multiple processes.
+Here an example of a workflow. 
 
+`workflow {
+  transcriptome_ch = channel.fromPath('data/yeast/transcriptome/*.fa.gz')
+  reads = channel.fromFilePairs('data/yeast/reads/*_{1,2}.fq.gz')
+}`
 
 ## Run the pipeline
 
