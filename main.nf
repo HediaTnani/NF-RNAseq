@@ -73,10 +73,12 @@ workflow {
   featurecounts(star_alignment.out.bam,gtf)
   star_alignment.out.bam.view()
 
-  // Merge counts
+  // Clean counts
   finalcount(featurecounts.out.counts)
+  
   // countmatrix
   countmatrix(finalcount.out.mergedcounts.collect())
+  
  // deseq 
  //deseq(countmatrix.out.countmatr, metadata)
 }
