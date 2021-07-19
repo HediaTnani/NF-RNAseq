@@ -18,9 +18,7 @@ Download the executable package by copying and pasting either one of the followi
 
 Or, if you prefer curl: `curl -s https://get.nextflow.io | bash`
 
-This will create the nextflow main executable file in the current directory.
-
-Make the binary executable on your system by running `chmod +x nextflow`.
+then `mv nextflow ~/bin`
 
 # Docker
 **Installing Docker**
