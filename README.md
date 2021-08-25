@@ -73,7 +73,7 @@ TODO
 
 ## Pipeline summary
 
-This pipeline has been run with test data. The steps 
+This pipeline has been run with test data. The steps are:
 
 1. QC ([`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
 2. Adapter and quality trimming ([`Trimmomatic!`](http://www.usadellab.org/cms/?page=trimmomatic))
