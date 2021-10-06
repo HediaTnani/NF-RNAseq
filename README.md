@@ -18,7 +18,7 @@ Download the executable package by copying and pasting either one of the followi
 
 Or, if you prefer curl: `curl -s https://get.nextflow.io | bash`
 
-then `mv nextflow ~/bin`
+then `mv nextflow ~/bin` or `sudo mv nextflow /usr/local/bin` for system-wide installation
 
 # Docker
 **Installing Docker**
