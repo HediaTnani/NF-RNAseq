@@ -1,8 +1,5 @@
 #!/usr/bin/env Rscript
 
-library(purrr)
-library(tidyverse)
-
 if (!require("purrr")){
   install.packages("purrr", dep=T)
   suppressPackageStartupMessages(library("purrr"))
@@ -12,6 +9,11 @@ if (!require("tidyverse")){
   install.packages("tidyverse", dep=T)
   suppressPackageStartupMessages(library("tidyverse"))
 }
+
+
+library(purrr)
+library(tidyverse)
+
 
 f_files<- list.files(pattern = "counts.tsv", full.names = F)
 read_in_feature_counts<- function(file){
