@@ -1,5 +1,8 @@
 #!/usr/bin/env Rscript
 
+dir.create(Sys.getenv("R_LIBS_USER"), recursive = TRUE)  # create personal library
+.libPaths(Sys.getenv("R_LIBS_USER"))  # add to the path
+
 if (!require("purrr")){
   install.packages("purrr", dep=T)
   suppressPackageStartupMessages(library("purrr"))
