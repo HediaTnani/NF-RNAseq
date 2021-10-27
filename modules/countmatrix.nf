@@ -6,6 +6,8 @@ nextflow.enable.dsl=2
 process countmatrix {
   label 'high'
   publishDir "$params.outdir/countmatrix", mode: 'copy', overwrite: true
+  container 'hediatnani/nf-renv:633e6c7'
+  
   
 input:
     path("*counts.tsv")
