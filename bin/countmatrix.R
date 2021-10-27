@@ -1,14 +1,14 @@
 #!/usr/bin/env Rscript
 
-if (!require("purrr")){
-  install.packages("purrr", dep=T)
-  suppressPackageStartupMessages(library("purrr"))
-}-
+#if (!require("purrr")){
+ # install.packages("purrr", dep=T)
+  #suppressPackageStartupMessages(library("purrr"))
+#}
 
-if (!require("tidyverse")){
-  install.packages("tidyverse", dep=T)
-  suppressPackageStartupMessages(library("tidyverse"))
-}
+#if (!require("tidyverse")){
+ # install.packages("tidyverse", dep=T)
+  #suppressPackageStartupMessages(library("tidyverse"))
+#}
 
 
 library(purrr)
