@@ -15,7 +15,7 @@ output:
 
 script:
 """
-Rscript $launchDir/bin/deseq.R ${metadata}
+Rscript --vanilla  $launchDir/bin/deseq.R ${metadata}
 """
 }
 
