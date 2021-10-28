@@ -1,6 +1,5 @@
 #!/usr/bin/env Rscript
 args = commandArgs(trailingOnly=TRUE)
-install.packages(c("tidyverse","ashr"),repos = "http://cran.us.r-project.org")
 library(tidyverse)
 library(ashr)
 library(DESeq2)
