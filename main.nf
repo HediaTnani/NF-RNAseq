@@ -49,7 +49,7 @@ include { multiqc } from "${launchDir}/modules/multiqc"
 include {featurecounts} from "${launchDir}/modules/featurecounts2" 
 include {finalcount} from "${launchDir}/modules/merge"
 include {countmatrix} from "${launchDir}/modules/countmatrix"
-//include {deseq} from "${launchDir}/modules/deseq2"
+include {deseq} from "${launchDir}/modules/deseq2"
 
 // We run the workflow  
 workflow {
@@ -80,7 +80,7 @@ workflow {
   countmatrix(finalcount.out.mergedcounts.collect())
   
  // deseq 
- //deseq(countmatrix.out.countmatr, metadata)
+ deseq(countmatrix.out.countmatr, metadata)
 }
 
 workflow.onComplete {
