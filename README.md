@@ -81,6 +81,7 @@ This pipeline has been run with test data. The steps are:
 4. Sort and index alignments ([`SAMtools`](https://sourceforge.net/projects/samtools/files/samtools/))
 5. Quantification ([`FeatureCounts`](http://subread.sourceforge.net/))
 6. Merge counts (Rscript)
+7. Deseq2 (Rscript)
 
 # Pipeline parameters
 The Nextflow script defines a pipeline parameter `params.input`. Pipeline parameters enable you to change the input to the workflow at runtime, via the command line or a configuration file, so they are not hard-coded into the script.
