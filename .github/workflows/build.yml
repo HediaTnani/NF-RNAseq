@@ -4,9 +4,9 @@ on: [push]
 
 jobs:
   build:
-    name: NF-RNAseq ci
+    name: NF-RNAseq ci build in ubuntu
     # This job runs on Linux
-    runs-on: [ubuntu-latest, macOS-latest, windows-latest]
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
       fail-fast: false
