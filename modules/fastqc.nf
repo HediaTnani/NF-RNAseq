@@ -15,8 +15,9 @@ process fastqc {
   path("*_fastqc.{zip,html}"), emit: fastqc_out
 
   script:
+  def data = params.paired ? "${reads[0]} ${reads[1]}" : "${reads}"
   """
-  fastqc ${reads}
+  fastqc ${data}
   """
 }
-
+ 

@@ -42,9 +42,10 @@ process star_alignment {
     tuple val(sample), path("*.bam"), emit: bam
 
     script:
+    def data = params.paired ? "${reads[0]} ${reads[1]}" : "${reads}"
     """
     STAR  \\
-        --readFilesIn ${reads} \\
+        --readFilesIn ${data} \\
         --runThreadN $task.cpus \\
         --outSAMtype BAM SortedByCoordinate \\
         --sjdbGTFfile ${gtf} \\

@@ -1,0 +1,14 @@
+2021-11-03 15:59:20	-	sad_waddington	-	74317a5edd5dfc1cb048621fe960b5ec	7caa0262-201a-4e14-a9f2-2045b975e8f9	nextflow run main.nf -profile docker .
+2021-11-03 16:04:31	-	shrivelled_varahamihira	-	74317a5edd5dfc1cb048621fe960b5ec	a7fea149-71bd-40af-8874-26da1152f6f3	nextflow run main.nf -profile docker .
+2021-11-03 17:03:50	-	clever_raman	-	74317a5edd5dfc1cb048621fe960b5ec	62437fcb-a7cc-438b-aab7-87b45fbb9497	nextflow run main.nf -profile docker .
+2021-11-05 11:36:26	-	silly_sammet	-	74317a5edd5dfc1cb048621fe960b5ec	bd676550-9bef-4c5f-8d34-81bda04799bf	nextflow run ./main.nf -profile docker
+2021-11-05 11:38:53	-	awesome_kalam	-	74317a5edd5dfc1cb048621fe960b5ec	5ac7a803-311a-469c-a764-c3d141bd1730	nextflow run ./main.nf -profile docker
+2021-11-05 11:41:49	5.4s	friendly_wozniak	ERR	74317a5edd5dfc1cb048621fe960b5ec	d7a6535c-6711-4ece-88ee-e904821c8051	nextflow run ./main.nf -profile docker
+2021-11-05 12:56:37	53s	reverent_majorana	ERR	74317a5edd5dfc1cb048621fe960b5ec	47bb1711-4f80-4da3-89a5-849f91fc178a	nextflow run ./main.nf -profile docker
+2021-11-05 13:29:11	1m 15s	nostalgic_sax	ERR	74317a5edd5dfc1cb048621fe960b5ec	e18b7890-0f27-4657-ad03-36207053699f	nextflow run ./main.nf -profile docker
+2021-11-05 16:58:33	6m 34s	determined_easley	ERR	74317a5edd5dfc1cb048621fe960b5ec	b91a6f6a-600b-4283-a3b3-ee6bc05bf2b1	nextflow run ./main.nf -profile docker
+2021-11-06 11:12:31	4m 31s	irreverent_kilby	OK	74317a5edd5dfc1cb048621fe960b5ec	12858da2-d114-4eac-a5fe-90d9a9a0c280	nextflow run ./main.nf -profile docker
+2021-11-08 11:15:46	3.4s	clever_wescoff	ERR	74317a5edd5dfc1cb048621fe960b5ec	05965822-7a88-4b31-bf68-a13918a7d6bc	nextflow run ./main.nf
+2021-11-08 11:58:47	3.8s	shrivelled_lichterman	ERR	74317a5edd5dfc1cb048621fe960b5ec	0bc7d0d2-d36d-4418-8df4-51509561d179	nextflow run ./main.nf
+2021-11-08 12:10:58	3.7s	peaceful_pauling	ERR	74317a5edd5dfc1cb048621fe960b5ec	b366af78-08f4-4e6d-9a58-d463e484cb56	nextflow run ./main.nf
+2021-11-16 14:58:23	5s	mad_monod	ERR	74317a5edd5dfc1cb048621fe960b5ec	51197a75-d1da-407b-8027-7128b4b7207a	nextflow run ./main.nf

@@ -10,11 +10,6 @@ process multiqc {
 
     input:
     path (inputfiles)
-
-    output:
-    path "multiqc_report.html"					
-
-    script:
     """
     multiqc .
     """

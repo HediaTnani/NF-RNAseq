@@ -2,6 +2,8 @@
 
 // author: Hédia Tnani (Pasteur Institute of Tunis)
 
+VERSION="1.0"
+
 // This is needed for activating the new DLS2
 nextflow.enable.dsl=2
 
@@ -32,9 +34,20 @@ Metadata         : $params.metadata
 """
 
 
-// We start by creating a channel 
-read_pairs_ch = Channel
-        .fromFilePairs(params.reads, checkIfExists:true)
+// We start by creating a channel
+ 
+def load_reads(path, paired) {
+  if (paired) {
+    Channel
+      .fromFilePairs( path, checkIfExists:true)
+      .set {read_pairs_ch}
+  } else {
+    read_ch =Channel
+      .fromPath( path , checkIfExists:true)
+      .map { [it.getName().split("\\_1|\\_2", 2)[0], [it]] }
+      .set {read_pairs_ch}
+  }
+}
 
 genome = file(params.genome)
 gtf = file(params.gtf)
@@ -53,6 +66,7 @@ include {deseq} from "${launchDir}/modules/deseq2"
 
 // We run the workflow  
 workflow {
+  load_reads(params.reads, params.paired)
   // QC on raw reads
   read_pairs_ch.view()
   fastqc_raw(read_pairs_ch) 

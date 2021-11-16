@@ -1,0 +1,308 @@
+Nov-05 16:58:31.435 [main] DEBUG nextflow.cli.Launcher - $> nextflow run ./main.nf -profile docker
+Nov-05 16:58:31.625 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.3
+Nov-05 16:58:31.669 [main] INFO  nextflow.cli.CmdRun - Launching `./main.nf` [determined_easley] - revision: 74317a5edd
+Nov-05 16:58:31.694 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/htnani/NF-RNAseq/nextflow.config
+Nov-05 16:58:31.695 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/htnani/NF-RNAseq/nextflow.config
+Nov-05 16:58:31.734 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Nov-05 16:58:33.244 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [conda, docker]
+Nov-05 16:58:33.286 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/htnani/.nextflow/plugins
+Nov-05 16:58:33.288 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-05 16:58:33.292 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Nov-05 16:58:33.305 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-05 16:58:33.306 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-05 16:58:33.313 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Nov-05 16:58:33.327 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-05 16:58:33.404 [main] DEBUG nextflow.Session - Session uuid: b91a6f6a-600b-4283-a3b3-ee6bc05bf2b1
+Nov-05 16:58:33.404 [main] DEBUG nextflow.Session - Run name: determined_easley
+Nov-05 16:58:33.405 [main] DEBUG nextflow.Session - Executor pool size: 24
+Nov-05 16:58:33.435 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.3 build 5560
+  Created: 21-07-2021 15:09 UTC (17:09 CEST)
+  System: Linux 4.15.0-142-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 1.8.0_292-8u292-b10-0ubuntu1~18.04-b10
+  Encoding: UTF-8 (UTF-8)
+  Process: 4179@simba [127.0.1.1]
+  CPUs: 24 - Mem: 94.3 GB (2.7 GB) - Swap: 2 GB (1.4 GB)
+Nov-05 16:58:33.466 [main] DEBUG nextflow.Session - Work-dir: /home/htnani/NF-RNAseq/work [ext2/ext3]
+Nov-05 16:58:33.494 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-05 16:58:33.513 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-05 16:58:33.844 [main] DEBUG nextflow.Session - Session start invoked
+Nov-05 16:58:34.543 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-05 16:58:34.561 [main] INFO  nextflow.script.BaseScript -       LIST OF PARAMETERS
+================================
+            GENERAL
+Data-folder      : /home/htnani/NF-RNAseq/testdata
+Results-folder   : /home/htnani/NF-RNAseq/results
+================================
+      INPUT & REFERENCES 
+Input-files      : /home/htnani/NF-RNAseq/testdata/*_{1,2}.fastq.gz
+Reference genome : /home/htnani/NF-RNAseq/testdata/genome.fa
+GTF-file         : /home/htnani/NF-RNAseq/testdata/annotation.gtf
+================================
+          TRIMMOMATIC
+Sliding window   : SLIDINGWINDOW:4:15
+Average quality  : AVGQUAL:30
+================================
+             STAR
+Threads          : 2
+Length-reads     : 98
+SAindexNbases    : 10
+================================
+              METADATA
+Metadata         : /home/htnani/NF-RNAseq/testdata/samples.txt
+================================ 
+
+Nov-05 16:58:35.432 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: trimmomatic, countmatrix, star_idx, featurecounts, fastqc, fastqc_raw, fastqc_trim, finalcount, multiqc, star_alignment, deseq
+Nov-05 16:58:35.647 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-05 16:58:35.647 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-05 16:58:35.655 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-05 16:58:35.663 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=24; memory=94.3 GB; capacity=24; pollInterval=100ms; dumpInterval=5m
+Nov-05 16:58:35.782 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-05 16:58:35.783 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-05 16:58:35.794 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-05 16:58:35.794 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-05 16:58:35.800 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-05 16:58:35.800 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-05 16:58:35.807 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-05 16:58:35.807 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-05 16:58:35.827 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-05 16:58:35.827 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-05 16:58:35.840 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-05 16:58:35.840 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-05 16:58:35.853 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-05 16:58:35.853 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-05 16:58:35.860 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-05 16:58:35.860 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-05 16:58:35.865 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-05 16:58:35.865 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-05 16:58:35.870 [main] DEBUG nextflow.Session - Ignite dataflow network (11)
+Nov-05 16:58:35.881 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/htnani/NF-RNAseq/testdata/; pattern: *_{1,2}.fastq.gz; options: [checkIfExists:true]
+Nov-05 16:58:35.881 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastqc_raw
+Nov-05 16:58:35.882 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > trimmomatic
+Nov-05 16:58:35.883 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastqc_trim
+Nov-05 16:58:35.883 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > star_idx
+Nov-05 16:58:35.884 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > star_alignment
+Nov-05 16:58:35.885 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multiqc
+Nov-05 16:58:35.886 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > featurecounts
+Nov-05 16:58:35.887 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > finalcount
+Nov-05 16:58:35.890 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > countmatrix
+Nov-05 16:58:35.893 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > deseq
+Nov-05 16:58:35.894 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Nov-05 16:58:35.895 [main] DEBUG nextflow.Session - Session await
+Nov-05 16:58:36.331 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:36.338 [Task submitter] INFO  nextflow.Session - [09/29df70] Submitted process > trimmomatic (3)
+Nov-05 16:58:36.349 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:36.350 [Task submitter] INFO  nextflow.Session - [3d/bedfeb] Submitted process > fastqc_raw (1)
+Nov-05 16:58:36.365 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:36.365 [Task submitter] INFO  nextflow.Session - [43/e22fad] Submitted process > star_idx
+Nov-05 16:58:36.374 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:36.375 [Task submitter] INFO  nextflow.Session - [95/19a801] Submitted process > trimmomatic (4)
+Nov-05 16:58:36.383 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:36.384 [Task submitter] INFO  nextflow.Session - [f3/b15f2d] Submitted process > fastqc_raw (3)
+Nov-05 16:58:36.394 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:36.395 [Task submitter] INFO  nextflow.Session - [ea/aed16e] Submitted process > trimmomatic (2)
+Nov-05 16:58:36.403 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:36.404 [Task submitter] INFO  nextflow.Session - [4c/4dc6ad] Submitted process > fastqc_raw (2)
+Nov-05 16:58:36.414 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:36.415 [Task submitter] INFO  nextflow.Session - [d9/aa0b26] Submitted process > fastqc_raw (4)
+Nov-05 16:58:36.426 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:36.429 [Task submitter] INFO  nextflow.Session - [eb/999453] Submitted process > trimmomatic (1)
+Nov-05 16:58:53.093 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: trimmomatic (2); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/ea/aed16e55c97438ed8a40009640e9fe]
+Nov-05 16:58:53.137 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=72; maxQueueSize=216; keepAlive=1m
+Nov-05 16:58:53.144 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:53.145 [Task submitter] INFO  nextflow.Session - [b3/06576f] Submitted process > fastqc_trim (1)
+Nov-05 16:58:53.165 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: trimmomatic (3); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/09/29df7050e24eff9aebc41223f8e960]
+Nov-05 16:58:53.188 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:53.189 [Task submitter] INFO  nextflow.Session - [85/8d75a7] Submitted process > fastqc_trim (2)
+Nov-05 16:58:55.372 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: trimmomatic (1); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/eb/999453015c3798169d8235421d6513]
+Nov-05 16:58:55.391 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:55.392 [Task submitter] INFO  nextflow.Session - [66/402384] Submitted process > fastqc_trim (3)
+Nov-05 16:58:55.460 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: trimmomatic (4); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/95/19a8011d3bd63a2c65a9ef29eec4b2]
+Nov-05 16:58:55.490 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:58:55.495 [Task submitter] INFO  nextflow.Session - [56/0de8d1] Submitted process > fastqc_trim (4)
+Nov-05 16:59:03.440 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: fastqc_raw (2); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/4c/4dc6adb04b5325954d3b9e1757a518]
+Nov-05 16:59:04.086 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: fastqc_raw (3); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/f3/b15f2d5f9014a04fc0f141008a709b]
+Nov-05 16:59:06.786 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: fastqc_raw (1); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/3d/bedfebbcca7d324b3bde96b4e7f9ea]
+Nov-05 16:59:06.799 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: fastqc_raw (4); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/d9/aa0b268a536749c70b30d4d75a6400]
+Nov-05 16:59:16.101 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: fastqc_trim (1); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/b3/06576f77e5c356b68719424cc5c036]
+Nov-05 16:59:17.846 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: fastqc_trim (2); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/85/8d75a75b0396940dc5d0d8c02de371]
+Nov-05 16:59:22.227 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: fastqc_trim (4); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/56/0de8d10f83ca05c4ba2d8fdfecdc25]
+Nov-05 16:59:24.367 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: fastqc_trim (3); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/66/4023845d88786927ccb13de2cc07e9]
+Nov-05 16:59:24.416 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:59:24.417 [Task submitter] INFO  nextflow.Session - [4e/43a422] Submitted process > multiqc
+Nov-05 16:59:28.773 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: star_idx; status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/43/e22fad6b926092aa02a43cdaa2fe5d]
+Nov-05 16:59:28.815 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:59:28.815 [Task submitter] INFO  nextflow.Session - [48/02f482] Submitted process > star_alignment (2)
+Nov-05 16:59:28.822 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:59:28.822 [Task submitter] INFO  nextflow.Session - [c0/dfe1de] Submitted process > star_alignment (1)
+Nov-05 16:59:28.828 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:59:28.828 [Task submitter] INFO  nextflow.Session - [18/47fd79] Submitted process > star_alignment (4)
+Nov-05 16:59:28.834 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 16:59:28.834 [Task submitter] INFO  nextflow.Session - [95/e650d0] Submitted process > star_alignment (3)
+Nov-05 16:59:39.254 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: multiqc; status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/4e/43a42270cf6418ee5ee9b341c17791]
+Nov-05 17:01:01.466 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: star_alignment (2); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/48/02f482a2fc97783ab20bb19a80bec2]
+Nov-05 17:01:01.488 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 17:01:01.488 [Task submitter] INFO  nextflow.Session - [d3/b35872] Submitted process > featurecounts (mouse_cns_E14_rep1)
+Nov-05 17:01:08.105 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: star_alignment (3); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/95/e650d012b89f58d20a2f4e04cd9ba0]
+Nov-05 17:01:08.121 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 17:01:08.122 [Task submitter] INFO  nextflow.Session - [d6/e24164] Submitted process > featurecounts (mouse_cns_E18_rep2)
+Nov-05 17:01:08.135 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: star_alignment (1); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/c0/dfe1de808d0164f76f7d78e8e3ab9c]
+Nov-05 17:01:08.151 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 17:01:08.152 [Task submitter] INFO  nextflow.Session - [7b/4615fc] Submitted process > featurecounts (mouse_cns_E18_rep1)
+Nov-05 17:01:13.681 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: star_alignment (4); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/18/47fd79c21cf566cb54e0a19032665c]
+Nov-05 17:01:13.693 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 17:01:13.693 [Task submitter] INFO  nextflow.Session - [59/9d0c9a] Submitted process > featurecounts (mouse_cns_E14_rep2)
+Nov-05 17:01:23.657 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: featurecounts (mouse_cns_E18_rep2); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/d6/e241648b29da3acc398af59478bc75]
+Nov-05 17:01:23.673 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 17:01:23.673 [Task submitter] INFO  nextflow.Session - [73/d59a35] Submitted process > finalcount (mouse_cns_E18_rep2)
+Nov-05 17:01:23.711 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: finalcount (mouse_cns_E18_rep2); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/73/d59a35104500be6f158ae59ae58391]
+Nov-05 17:01:25.939 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: featurecounts (mouse_cns_E14_rep2); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/59/9d0c9a43542f6312a220bd27d3f839]
+Nov-05 17:01:25.954 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 17:01:25.954 [Task submitter] INFO  nextflow.Session - [e2/991b21] Submitted process > finalcount (mouse_cns_E14_rep2)
+Nov-05 17:01:26.021 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: finalcount (mouse_cns_E14_rep2); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/e2/991b210da3a346a721cbd8195a1a00]
+Nov-05 17:01:26.291 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: featurecounts (mouse_cns_E14_rep1); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/d3/b358727e4598380a2ab2ac42c0941c]
+Nov-05 17:01:26.310 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 17:01:26.310 [Task submitter] INFO  nextflow.Session - [e9/1af157] Submitted process > finalcount (mouse_cns_E14_rep1)
+Nov-05 17:01:26.319 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: featurecounts (mouse_cns_E18_rep1); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/7b/4615fc7c33eef4a6d06ee0f4c7d5b2]
+Nov-05 17:01:26.333 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 17:01:26.334 [Task submitter] INFO  nextflow.Session - [9f/593ab4] Submitted process > finalcount (mouse_cns_E18_rep1)
+Nov-05 17:01:26.351 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: finalcount (mouse_cns_E14_rep1); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/e9/1af157fc65ea7c4f6d08aa9bd95500]
+Nov-05 17:01:26.372 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: finalcount (mouse_cns_E18_rep1); status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/9f/593ab46b403e4d425b76ef43ecd0da]
+Nov-05 17:01:26.393 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 17:01:26.393 [Task submitter] INFO  nextflow.Session - [c1/4fba21] Submitted process > countmatrix
+Nov-05 17:02:58.879 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: countmatrix; status: COMPLETED; exit: 0; error: -; workDir: /home/htnani/NF-RNAseq/work/c1/4fba21de617ae82f76cfe338079cbd]
+Nov-05 17:02:58.898 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-05 17:02:58.899 [Task submitter] INFO  nextflow.Session - [58/77aff6] Submitted process > deseq
+Nov-05 17:03:35.843 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 28; name: deseq; status: RUNNING; exit: -; error: -; workDir: /home/htnani/NF-RNAseq/work/58/77aff667e65d811e42cfe90db30ff5]
+Nov-05 17:05:06.735 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: deseq; status: COMPLETED; exit: 125; error: -; workDir: /home/htnani/NF-RNAseq/work/58/77aff667e65d811e42cfe90db30ff5]
+Nov-05 17:05:06.780 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'deseq'
+
+Caused by:
+  Process `deseq` terminated with an error exit status (125)
+
+Command executed:
+
+  Rscript --vanilla  /home/htnani/NF-RNAseq/bin/deseq.R samples.txt
+
+Command exit status:
+  125
+
+Command output:
+  (empty)
+
+Command error:
+  05772e71d0ba: Waiting
+  87b9d2375f5d: Pulling fs layer
+  e83652146d67: Waiting
+  9e9bc8d4d4ee: Pulling fs layer
+  e8373e00e341: Pulling fs layer
+  87b9d2375f5d: Waiting
+  9e9bc8d4d4ee: Waiting
+  2f9dab7c1f22: Pulling fs layer
+  e8373e00e341: Waiting
+  2d5ebdcdf025: Pulling fs layer
+  e031c1a9f2f8: Verifying Checksum
+  e031c1a9f2f8: Download complete
+  16ec32c2132b: Verifying Checksum
+  16ec32c2132b: Download complete
+  5d3c6fe2adc6: Download complete
+  c24274462d93: Verifying Checksum
+  c24274462d93: Download complete
+  16ec32c2132b: Pull complete
+  0118eaafaf1e: Verifying Checksum
+  0118eaafaf1e: Download complete
+  e031c1a9f2f8: Pull complete
+  a70855d85b62: Download complete
+  ee8d56356e0a: Verifying Checksum
+  ee8d56356e0a: Download complete
+  e83652146d67: Verifying Checksum
+  e83652146d67: Download complete
+  b057f5e00395: Verifying Checksum
+  b057f5e00395: Download complete
+  05772e71d0ba: Download complete
+  9d894864c042: Verifying Checksum
+  9d894864c042: Download complete
+  9e9bc8d4d4ee: Download complete
+  87b9d2375f5d: Verifying Checksum
+  87b9d2375f5d: Download complete
+  e8373e00e341: Verifying Checksum
+  e8373e00e341: Download complete
+  a70855d85b62: Pull complete
+  2d5ebdcdf025: Verifying Checksum
+  2d5ebdcdf025: Download complete
+  2f9dab7c1f22: Verifying Checksum
+  2f9dab7c1f22: Download complete
+  ee8d56356e0a: Pull complete
+  5d3c6fe2adc6: Pull complete
+  c24274462d93: Pull complete
+  0118eaafaf1e: Pull complete
+  3e8998d239b9: Verifying Checksum
+  3e8998d239b9: Download complete
+  3e8998d239b9: Pull complete
+  docker: unexpected EOF.
+  See 'docker run --help'.
+
+Work dir:
+  /home/htnani/NF-RNAseq/work/58/77aff667e65d811e42cfe90db30ff5
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+Nov-05 17:05:06.786 [main] DEBUG nextflow.Session - Session await > all process finished
+Nov-05 17:05:06.788 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `deseq` terminated with an error exit status (125)
+Nov-05 17:05:06.828 [Task monitor] INFO  nextflow.script.BaseScript - Oops... Pipeline execution stopped with the following message: 05772e71d0ba: Waiting
+87b9d2375f5d: Pulling fs layer
+e83652146d67: Waiting
+9e9bc8d4d4ee: Pulling fs layer
+e8373e00e341: Pulling fs layer
+87b9d2375f5d: Waiting
+9e9bc8d4d4ee: Waiting
+2f9dab7c1f22: Pulling fs layer
+e8373e00e341: Waiting
+2d5ebdcdf025: Pulling fs layer
+e031c1a9f2f8: Verifying Checksum
+e031c1a9f2f8: Download complete
+16ec32c2132b: Verifying Checksum
+16ec32c2132b: Download complete
+5d3c6fe2adc6: Download complete
+c24274462d93: Verifying Checksum
+c24274462d93: Download complete
+16ec32c2132b: Pull complete
+0118eaafaf1e: Verifying Checksum
+0118eaafaf1e: Download complete
+e031c1a9f2f8: Pull complete
+a70855d85b62: Download complete
+ee8d56356e0a: Verifying Checksum
+ee8d56356e0a: Download complete
+e83652146d67: Verifying Checksum
+e83652146d67: Download complete
+b057f5e00395: Verifying Checksum
+b057f5e00395: Download complete
+05772e71d0ba: Download complete
+9d894864c042: Verifying Checksum
+9d894864c042: Download complete
+9e9bc8d4d4ee: Download complete
+87b9d2375f5d: Verifying Checksum
+87b9d2375f5d: Download complete
+e8373e00e341: Verifying Checksum
+e8373e00e341: Download complete
+a70855d85b62: Pull complete
+2d5ebdcdf025: Verifying Checksum
+2d5ebdcdf025: Download complete
+2f9dab7c1f22: Verifying Checksum
+2f9dab7c1f22: Download complete
+ee8d56356e0a: Pull complete
+5d3c6fe2adc6: Pull complete
+c24274462d93: Pull complete
+0118eaafaf1e: Pull complete
+3e8998d239b9: Verifying Checksum
+3e8998d239b9: Download complete
+3e8998d239b9: Pull complete
+docker: unexpected EOF.
+See 'docker run --help'.
+Nov-05 17:05:06.829 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-05 17:05:06.840 [main] INFO  nextflow.script.BaseScript - Pipeline completed at: 2021-11-05T17:05:06.832+01:00
+Nov-05 17:05:06.840 [main] INFO  nextflow.script.BaseScript - Time to complete workflow execution: 6m 33s
+Nov-05 17:05:06.840 [main] INFO  nextflow.script.BaseScript - Execution status: Failed
+Nov-05 17:05:06.848 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=27; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=15m 16s; failedDuration=2m 8s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=9; peakCpus=9; peakMemory=0; ]
+Nov-05 17:05:07.012 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Nov-05 17:05:07.424 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

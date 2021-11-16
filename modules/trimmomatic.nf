@@ -18,8 +18,19 @@ process trimmomatic {
     tuple val("${sample}"), path("${sample}*_U.fq"), emit: untrim_fq
     
     script:
-    """
-    trimmomatic PE -threads $params.threads ${reads[0]} ${reads[1]} ${sample}1_P.fq ${sample}1_U.fq ${sample}2_P.fq ${sample}2_U.fq $params.slidingwindow $params.avgqual 
-    """
-}
+    def data = params.paired ? "${reads[0]} ${reads[1]}" : "${reads}"
+    if (params.paired){
+       """
+        trimmomatic PE -threads $params.threads \
+        ${data} ${sample}1_P.fq ${sample}1_U.fq ${sample}2_P.fq ${sample}2_U.fq \
+        $params.slidingwindow $params.avgqual
+       """
+    } else {
+       """
+        trimmomatic SE -threads $params.threads \
+        ${data} ${sample}_P.fq ${sample}_U.fq $params.slidingwindow $params.avgqual
+       """
 
+    }
+
+}
