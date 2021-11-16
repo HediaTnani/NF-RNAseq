@@ -1,4 +1,4 @@
-name: NF-RNAseq build on Ubuntu
+name: NF-RNAseq Ubuntu
 # This workflow is triggered on pushes to the repository.
 on: [push]
 
