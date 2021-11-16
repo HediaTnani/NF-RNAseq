@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     name: NF-RNAseq build on macos
-    # This job runs on Linux
+    # This job runs on macos
     runs-on: macOS-latest
     timeout-minutes: 10
     strategy:
