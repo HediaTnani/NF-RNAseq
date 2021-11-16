@@ -6,7 +6,7 @@ jobs:
   build:
     name: NF-RNAseq ci
     # This job runs on Linux
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest, macOS-latest, windows-latest]
     timeout-minutes: 10
     strategy:
       fail-fast: false
