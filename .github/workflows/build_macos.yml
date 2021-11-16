@@ -28,6 +28,11 @@ jobs:
         with:
           java-version: ${{ matrix.java_version }}
           architecture: x64
+          
+      - name: Setup Docker
+        run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+          brew cask install docker
 
       - name: Tests
         run: |
