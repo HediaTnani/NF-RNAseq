@@ -1,4 +1,4 @@
-name: NF-RNAseq
+name: NF-RNAseq macos
 # This workflow is triggered on pushes to the repository.
 on: [push]
 
