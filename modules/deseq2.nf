@@ -5,7 +5,7 @@ nextflow.enable.dsl=2
 process deseq {
   label 'high'
   publishDir "$params.outdir/output_deseq2", mode: 'copy', overwrite: true
-  container "hediatnani/nf-renv:d57d4d6"
+  container "hediatnani/nf-renv:51b8524"
 
 input:
     path("countmatrix.tsv")
